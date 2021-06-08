@@ -35,7 +35,7 @@ const Cart = () => {
               onClick={() => removeItem(cartItem)}
             >
               <p className="emoji">{cartItem.emoji}</p>
-              <p>Time Added: {cartItem.timeAdded}</p>
+              <p>${cartItem.price}</p>
             </div>
           );
         })}
