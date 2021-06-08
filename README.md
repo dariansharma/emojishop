@@ -1,1 +1,1 @@
-https://emojishop.netlify.app/#/store
+https://emojishop.netlify.app/#/
