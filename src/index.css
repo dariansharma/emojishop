@@ -36,13 +36,12 @@ header {
   margin: 0.25em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .header-nav {
     width: 90%;
-
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
   }
 }
@@ -50,7 +49,7 @@ header {
 /*---------------------------------- Main content--------------------- */
 
 .content {
-  max-width: 90%;
+  width: 90%;
   margin: 1em 0;
 }
 
@@ -67,6 +66,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1em;
 }
 
 .itemCard * {
@@ -75,6 +75,8 @@ header {
 
 .itemCard:hover {
   cursor: pointer;
+  background-color: rgb(41, 204, 150);
+  box-shadow: 1em 1em black;
 }
 
 form {
@@ -82,7 +84,26 @@ form {
   flex-direction: column;
 }
 
+.emoji {
+  font-size: 4rem;
+}
 /* -------------------------React Router Specific------------------- */
 .selected {
   background-color: aqua;
+}
+
+@media screen and (min-width: 768px) {
+  .items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .itemCard {
+    width: 12em;
+    height: 12em;
+  }
+}
+
+a {
+  text-decoration: none;
 }

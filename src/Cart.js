@@ -18,14 +18,22 @@ const Cart = () => {
     });
   };
 
+  const clearCart = () => {
+    setCart((cart) => []);
+    setNumItems((numItems) => 0);
+    setCartTotal((cartTotal) => 0);
+  };
+
   return (
     <div>
-      <h2>Your Cart</h2>
-      {numItems > 0 ? (
-        <p>Click on an item to remove it.</p>
-      ) : (
-        <p>Go add some items!</p>
-      )}
+      <div>
+        <h2>Your Cart</h2>
+        {numItems > 0 ? (
+          <p>Click on an item to remove it.</p>
+        ) : (
+          <p>Go add some items!</p>
+        )}
+      </div>
       <div className="items">
         {cart.map((cartItem) => {
           return (
@@ -39,6 +47,9 @@ const Cart = () => {
             </div>
           );
         })}
+      </div>
+      <div>
+        <button onClick={() => clearCart()}>Clear Cart</button>
       </div>
       <div>
         <p>Total: {cartTotal.toFixed(2)}</p>
