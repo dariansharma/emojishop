@@ -46,6 +46,7 @@ header {
 .header-links {
   padding-left: 0.25em;
   padding-right: 0.25em;
+  transition: all 0.5s;
 }
 
 .header-links:hover:not(.selected) {
@@ -100,6 +101,7 @@ header {
   flex-direction: column;
   align-items: center;
   border-radius: 1em;
+  transition: all 0.5s;
 }
 
 .itemCard * {
@@ -110,6 +112,7 @@ header {
   cursor: pointer;
   background-color: rgb(41, 204, 150);
   box-shadow: 1em 1em black;
+  transform: scale(1.05);
 }
 
 form {
@@ -131,6 +134,7 @@ form {
   color: black;
   text-align: center;
   text-decoration: none;
+  transition: all 0.5s;
 }
 
 .button:hover {
