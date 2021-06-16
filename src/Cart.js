@@ -25,8 +25,8 @@ const Cart = () => {
   };
 
   return (
-    <div>
-      <div>
+    <>
+      <div className="content-header">
         <h2>Your Cart</h2>
         {numItems > 0 ? (
           <p>Click on an item to remove it.</p>
@@ -48,13 +48,16 @@ const Cart = () => {
           );
         })}
       </div>
-      <div>
-        <button onClick={() => clearCart()}>Clear Cart</button>
-      </div>
-      <div>
-        <p>Total: {cartTotal.toFixed(2)}</p>
-      </div>
-    </div>
+      {numItems > 0 && (
+        <div className="content-footer">
+          <button className="button" onClick={() => clearCart()}>
+            <h2>Clear Cart</h2>
+          </button>
+          <br></br>
+          <h2>Total: {cartTotal.toFixed(2)}</h2>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import PaymentInfo from "./PaymentInfo";
 
 const Checkout = () => {
   const { numItems } = useContext(TestContext);
-  return <div>{numItems > 0 ? <PaymentInfo /> : <ThankYou />}</div>;
+  return <>{numItems > 0 ? <PaymentInfo /> : <ThankYou />}</>;
 };
 
 export default Checkout;

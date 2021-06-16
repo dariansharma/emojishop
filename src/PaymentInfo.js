@@ -12,8 +12,10 @@ const PaymentInfo = () => {
   };
 
   return (
-    <div>
-      <h2>Enter Payment Details</h2>
+    <>
+      <div className="content-header">
+        <h2>Enter Payment Details</h2>
+      </div>
       <form onSubmit={payForOrder}>
         <label htmlFor="firstName">First Name</label>
         <input type="text" id="firstName"></input>
@@ -24,11 +26,11 @@ const PaymentInfo = () => {
         <label htmlFor="creditCard">Credit Card Number</label>
         <input type="number" id="creditCard"></input>
         <br></br>
-        <button type="submit" id="submitPayment">
-          Pay For Order
+        <button className="button" type="submit" id="submitPayment">
+          <h2>Pay For Order</h2>
         </button>
       </form>
-    </div>
+    </>
   );
 };
 

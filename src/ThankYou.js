@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ThankYou = () => {
   return (
-    <div>
+    <div className="content-header">
       <NavLink exact to="/">
         Thank you, return to Home
       </NavLink>

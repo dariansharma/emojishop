@@ -15,8 +15,10 @@ const Store = () => {
 
   return (
     <div>
-      <h2>Pick Your Emojies</h2>
-      <p>Click on an item to add it to your cart.</p>
+      <div className="content-header">
+        <h2>Pick Your Emojies</h2>
+        <p>Click on an item to add it to your cart.</p>
+      </div>
       <div className="items">
         {storeItems.map((item) => {
           return (

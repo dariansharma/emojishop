@@ -28,25 +28,42 @@ const Main = () => {
       <HashRouter>
         <div className="app-container">
           <header>
-            <h1>Emoji Store</h1>
+            <h1>Emoji Shop</h1>
             <ul className="header-nav">
               <li>
-                <NavLink exact to="/" activeClassName="selected">
+                <NavLink
+                  className="header-links"
+                  exact
+                  to="/"
+                  activeClassName="selected"
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/store" activeClassName="selected">
+                <NavLink
+                  className="header-links"
+                  to="/store"
+                  activeClassName="selected"
+                >
                   Store
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/cart" activeClassName="selected">
+                <NavLink
+                  className="header-links"
+                  to="/cart"
+                  activeClassName="selected"
+                >
                   Cart {numItems > 0 ? numItems : " "}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/checkout" activeClassName="selected">
+                <NavLink
+                  className="header-links"
+                  to="/checkout"
+                  activeClassName="selected"
+                >
                   Checkout
                 </NavLink>
               </li>
