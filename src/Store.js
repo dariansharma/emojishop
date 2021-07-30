@@ -3,8 +3,7 @@ import { TestContext } from "./Main.js";
 
 const Store = () => {
   const stateContext = useContext(TestContext);
-  const { cart, numItems, setCart, setNumItems, storeItems, setCartTotal } =
-    stateContext;
+  const { setCart, setNumItems, storeItems, setCartTotal } = stateContext;
 
   const addToCart = (itm) => {
     setCart((cart) => {

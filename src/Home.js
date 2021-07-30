@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { TestContext } from "./Main";
 
 const Home = () => {
-  const { cart, setCart } = useContext(TestContext);
   return (
     <div className="content-header">
       <h2>Hello</h2>
