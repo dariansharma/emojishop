@@ -4,7 +4,6 @@ import { TestContext } from "./Main";
 
 const Home = () => {
   const { cart, setCart } = useContext(TestContext);
-  console.log(cart, setCart);
   return (
     <div className="content-header">
       <h2>Hello</h2>

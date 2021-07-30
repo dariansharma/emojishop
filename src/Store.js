@@ -3,14 +3,33 @@ import { TestContext } from "./Main.js";
 
 const Store = () => {
   const stateContext = useContext(TestContext);
-  const { setCart, setNumItems, storeItems, setCartTotal } = stateContext;
+  const { cart, numItems, setCart, setNumItems, storeItems, setCartTotal } =
+    stateContext;
 
-  const addToCart = (item) => {
-    var cartItem = { ...item };
-    cartItem.timeAdded = new Date().getTime();
-    setCart((cart) => [...cart, cartItem]);
-    setNumItems((currNumItems) => currNumItems + 1);
-    setCartTotal((currCartTotal) => currCartTotal + cartItem.price);
+  const addToCart = (itm) => {
+    setCart((cart) => {
+      if (isItemIncart(cart, itm)) {
+        return cart.map((cartItem) => {
+          if (cartItem.item.id === itm.id) {
+            cartItem = { ...cartItem, count: cartItem.count + 1 };
+          }
+          return cartItem;
+        });
+      } else {
+        return [...cart, { item: itm, count: 1 }];
+      }
+    });
+    setNumItems((numItems) => numItems + 1);
+    setCartTotal((cartTotal) => cartTotal + itm.price);
+  };
+
+  const isItemIncart = (array, itm) => {
+    array = array.filter((element) => element.item.id === itm.id);
+    if (array.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   return (

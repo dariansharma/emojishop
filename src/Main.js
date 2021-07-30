@@ -55,7 +55,7 @@ const Main = () => {
                   to="/cart"
                   activeClassName="selected"
                 >
-                  Cart {numItems > 0 ? numItems : " "}
+                  Cart {numItems > 0 ? "(" + numItems + ")" : " "}
                 </NavLink>
               </li>
               <li>
