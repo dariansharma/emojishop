@@ -11,12 +11,13 @@ const Cart = () => {
         return cartItem.item.id !== item.item.id;
       })
     );
-    setNumItems((numItems) => numItems - 1);
+    console.log(item);
+    setNumItems((numItems) => numItems - item.count);
     setCartTotal((cartTotal) => {
       if (numItems === 1) {
         return 0;
       }
-      return cartTotal - item.item.price;
+      return cartTotal - item.item.price * item.count;
     });
   };
 
